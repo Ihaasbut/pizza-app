@@ -20,9 +20,13 @@ export default defineConfig([
       globals: globals.browser,
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'no-unused-vars': ['error', {
+        varsIgnorePattern: '^[A-Z_]',
+        argsIgnorePattern: '^_',
+      }],
+      'semi': ['error', 'always', { omitLastInOneLineBlock: false }],
+      'react/prop-types': 'off',
+      'react/no-unused-state': 'error',
     },
-    "semi": ["error", "always", { "omitLastInOneLineBlock": false }],
-    "react/prop-types": [0],
   },
 ])
