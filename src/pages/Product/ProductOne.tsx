@@ -11,7 +11,6 @@ function ProductOne() {
             <Await
                 resolve={data.data}>
                 {( product: Product) => {
-                    {console.log(product)}
                    return  <> Product- {product.name}</>
                 }}
             </Await>
